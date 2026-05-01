@@ -5,103 +5,88 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dhanalakshmi Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
 }
 
-/* HEADER */
 header {
     text-align: center;
     padding: 60px 20px;
-    animation: fadeDown 1s ease;
+    background: linear-gradient(135deg,#2563eb,#1e40af);
 }
 
 header h1 {
-    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin-top: 10px;
-    color: #ccc;
+    font-size: 18px;
+    color: #cbd5f5;
 }
 
-/* SECTION */
-section {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 30px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    animation: fadeUp 1s ease;
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-/* SKILLS */
-.skill {
-    margin: 10px 0;
+.section {
+    margin: 40px 0;
 }
 
-.bar {
-    height: 8px;
-    background: #444;
-    border-radius: 10px;
+.section h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #38bdf8;
+    margin-bottom: 15px;
 }
 
-.fill {
-    height: 8px;
-    background: #00f2fe;
-    border-radius: 10px;
-}
-
-/* PROJECT CARD */
-.project {
-    background: rgba(255,255,255,0.08);
-    padding: 15px;
-    border-radius: 10px;
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
     transition: 0.3s;
 }
 
-.project:hover {
-    transform: scale(1.05);
+.card:hover {
+    transform: translateY(-5px);
 }
 
-/* BUTTON */
+.skills span {
+    display: inline-block;
+    background: #2563eb;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
 .btn {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background: #00f2fe;
+    background: #38bdf8;
     color: black;
-    border-radius: 8px;
+    border-radius: 6px;
     text-decoration: none;
-}
-
-/* ANIMATION */
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-20px);}
-    to { opacity: 1; transform: translateY(0);}
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px);}
-    to { opacity: 1; transform: translateY(0);}
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    color: #aaa;
+    color: #94a3b8;
 }
 </style>
 </head>
@@ -110,53 +95,108 @@ footer {
 
 <header>
 <h1>Dhanalakshmi N</h1>
-<p>Full Stack Developer | AI Enthusiast</p>
+<p>Full Stack Developer | SAP Aspirant | AI Enthusiast</p>
 </header>
 
-<section>
-<h2>About Me</h2>
-<p>I am an Information Technology student passionate about building modern applications and solving real-world problems using AI and full-stack development.</p>
-</section>
+<div class="container">
 
-<section>
-<h2>Skills</h2>
-
-<div class="skill">Python
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+<div class="section">
+<h2>Professional Summary</h2>
+<div class="card">
+<p>Results-oriented Information Technology student with strong skills in full-stack development, Python, and Java. Experienced in building responsive applications and performing basic data analysis. Passionate about enterprise technologies and eager to build a career in SAP and business solutions.</p>
+</div>
 </div>
 
-<div class="skill">Java
-<div class="bar"><div class="fill" style="width:85%"></div></div>
+<div class="section">
+<h2>Technical Skills</h2>
+<div class="card skills">
+<span>Python</span>
+<span>Java</span>
+<span>C</span>
+<span>SQL</span>
+<span>Full Stack Development</span>
+<span>Power BI</span>
+<span>Figma</span>
+<span>Data Structures</span>
+<span>DBMS</span>
+<span>Operating Systems</span>
+</div>
 </div>
 
-<div class="skill">SQL
-<div class="bar"><div class="fill" style="width:80%"></div></div>
+<div class="section">
+<h2>Internship Experience</h2>
+
+<div class="card">
+<b>Full Stack Java Intern – Re-Tech Solutions</b>
+<ul>
+<li>Developed web applications using Java technologies</li>
+<li>Worked on frontend and backend integration</li>
+</ul>
 </div>
 
-<div class="skill">Full Stack
-<div class="bar"><div class="fill" style="width:75%"></div></div>
+<div class="card">
+<b>Web Development Intern – Bigsi Buk Company</b>
+<ul>
+<li>Built responsive web pages</li>
+<li>Improved UI/UX design</li>
+</ul>
 </div>
 
-</section>
+<div class="card">
+<b>AI & Data Analyst Intern – Edunet Foundation</b>
+<ul>
+<li>Worked on AI and data analysis concepts</li>
+<li>Analyzed datasets and generated insights</li>
+</ul>
+</div>
 
-<section>
+</div>
+
+<div class="section">
 <h2>Project</h2>
-
-<div class="project">
-<h3>Neuro Control – BCI System</h3>
-<p>EEG-based system for controlling devices using brain signals. Focused on accessibility and AI integration.</p>
+<div class="card">
+<h3>Neuro Control – BCI Powered Solution</h3>
+<ul>
+<li>Developed EEG-based system for device control</li>
+<li>Focused on accessibility using brain-computer interface</li>
+<li>Applied AI concepts for real-world solutions</li>
+</ul>
+</div>
 </div>
 
-</section>
+<div class="section">
+<h2>Education</h2>
+<div class="card">
+<p><b>B.Tech Information Technology</b></p>
+<p>Sri Sairam Engineering College, Chennai</p>
+<p>Expected Graduation: 2027</p>
+</div>
+</div>
 
-<section>
+<div class="section">
+<h2>Strengths</h2>
+<div class="card">
+<ul>
+<li>Strong problem-solving ability</li>
+<li>Quick learner and adaptable</li>
+<li>Good communication and teamwork skills</li>
+</ul>
+</div>
+</div>
+
+<div class="section">
 <h2>Contact</h2>
+<div class="card">
 <p>Email: dhanampriya67@gmail.com</p>
-<a class="btn" href="https://www.linkedin.com/in/dhanalakshmi-n-914299298" target="_blank">LinkedIn</a>
-</section>
+<p>Phone: 8667733532</p>
+<a class="btn" href="https://www.linkedin.com/in/dhanalakshmi-n-914299298" target="_blank">LinkedIn Profile</a>
+</div>
+</div>
+
+</div>
 
 <footer>
-<p>© 2026 Dhanalakshmi</p>
+<p>© 2026 Dhanalakshmi | Portfolio</p>
 </footer>
 
 </body>
