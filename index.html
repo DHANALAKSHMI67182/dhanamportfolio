@@ -3,201 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Dhanalakshmi Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/6a2c6e6e5d.js" crossorigin="anonymous"></script>
 
 <style>
+
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: white;
+    overflow-x: hidden;
 }
 
+/* FLOATING ANIMATION */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bg span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.1);
+    animation: float 20s linear infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(100vh);}
+    100% {transform: translateY(-10vh);}
+}
+
+/* HEADER */
 header {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg,#2563eb,#1e40af);
+    padding: 80px 20px;
+    animation: fade 1s ease;
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 45px;
 }
 
 header p {
-    font-size: 18px;
-    color: #cbd5f5;
+    color: #ccc;
 }
 
-.container {
+/* CARD */
+section {
     width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section {
-    margin: 40px 0;
-}
-
-.section h2 {
-    font-family: 'Montserrat', sans-serif;
-    color: #38bdf8;
-    margin-bottom: 15px;
-}
-
-.card {
-    background: #1e293b;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+section:hover {
+    transform: scale(1.02);
 }
 
-.skills span {
-    display: inline-block;
-    background: #2563eb;
-    padding: 8px 12px;
-    border-radius: 6px;
-    margin: 5px;
-    font-size: 14px;
+h2 {
+    color: #00f2fe;
 }
 
-ul {
-    padding-left: 20px;
+/* SKILLS */
+.skill {
+    margin: 10px 0;
 }
 
+.bar {
+    height: 8px;
+    background: #333;
+    border-radius: 10px;
+}
+
+.fill {
+    height: 8px;
+    background: #00f2fe;
+}
+
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
-    background: #38bdf8;
+    padding: 10px;
+    background: #00f2fe;
     color: black;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #94a3b8;
+/* ANIMATION */
+@keyframes fade {
+    from {opacity:0;}
+    to {opacity:1;}
 }
+
 </style>
 </head>
 
 <body>
+
+<div class="bg">
+<span style="left:10%;animation-delay:0s"></span>
+<span style="left:20%;animation-delay:2s"></span>
+<span style="left:30%;animation-delay:4s"></span>
+<span style="left:40%;animation-delay:6s"></span>
+<span style="left:50%;animation-delay:8s"></span>
+</div>
 
 <header>
 <h1>Dhanalakshmi N</h1>
 <p>Full Stack Developer | SAP Aspirant | AI Enthusiast</p>
 </header>
 
-<div class="container">
+<section>
+<h2><i class="fas fa-user"></i> About Me</h2>
+<p>Results-oriented IT student with strong skills in full-stack development, Python, and Java. Passionate about enterprise technologies like SAP and solving real-world problems.</p>
+</section>
 
-<div class="section">
-<h2>Professional Summary</h2>
-<div class="card">
-<p>Results-oriented Information Technology student with strong skills in full-stack development, Python, and Java. Experienced in building responsive applications and performing basic data analysis. Passionate about enterprise technologies and eager to build a career in SAP and business solutions.</p>
-</div>
-</div>
+<section>
+<h2><i class="fas fa-code"></i> Skills</h2>
 
-<div class="section">
-<h2>Technical Skills</h2>
-<div class="card skills">
-<span>Python</span>
-<span>Java</span>
-<span>C</span>
-<span>SQL</span>
-<span>Full Stack Development</span>
-<span>Power BI</span>
-<span>Figma</span>
-<span>Data Structures</span>
-<span>DBMS</span>
-<span>Operating Systems</span>
-</div>
-</div>
+<div class="skill">Python<div class="bar"><div class="fill" style="width:90%"></div></div></div>
+<div class="skill">Java<div class="bar"><div class="fill" style="width:85%"></div></div></div>
+<div class="skill">SQL<div class="bar"><div class="fill" style="width:80%"></div></div></div>
+<div class="skill">Full Stack<div class="bar"><div class="fill" style="width:75%"></div></div></div>
 
-<div class="section">
-<h2>Internship Experience</h2>
+</section>
 
-<div class="card">
-<b>Full Stack Java Intern – Re-Tech Solutions</b>
+<section>
+<h2><i class="fas fa-briefcase"></i> Internships</h2>
 <ul>
-<li>Developed web applications using Java technologies</li>
-<li>Worked on frontend and backend integration</li>
+<li>Full Stack Java Intern – Re-Tech Solutions</li>
+<li>Web Development Intern – Bigsi Buk Company</li>
+<li>AI & Data Analyst Intern – Edunet Foundation</li>
 </ul>
-</div>
+</section>
 
-<div class="card">
-<b>Web Development Intern – Bigsi Buk Company</b>
-<ul>
-<li>Built responsive web pages</li>
-<li>Improved UI/UX design</li>
-</ul>
-</div>
+<section>
+<h2><i class="fas fa-project-diagram"></i> Project</h2>
+<p><b>Neuro Control – BCI System</b></p>
+<p>EEG-based system for controlling devices using brain signals with AI integration.</p>
+</section>
 
-<div class="card">
-<b>AI & Data Analyst Intern – Edunet Foundation</b>
-<ul>
-<li>Worked on AI and data analysis concepts</li>
-<li>Analyzed datasets and generated insights</li>
-</ul>
-</div>
+<section>
+<h2><i class="fas fa-bullseye"></i> Career Objective</h2>
+<p>To build a career in SAP technologies by applying my technical skills and continuously learning enterprise solutions.</p>
+</section>
 
-</div>
-
-<div class="section">
-<h2>Project</h2>
-<div class="card">
-<h3>Neuro Control – BCI Powered Solution</h3>
-<ul>
-<li>Developed EEG-based system for device control</li>
-<li>Focused on accessibility using brain-computer interface</li>
-<li>Applied AI concepts for real-world solutions</li>
-</ul>
-</div>
-</div>
-
-<div class="section">
-<h2>Education</h2>
-<div class="card">
-<p><b>B.Tech Information Technology</b></p>
-<p>Sri Sairam Engineering College, Chennai</p>
-<p>Expected Graduation: 2027</p>
-</div>
-</div>
-
-<div class="section">
-<h2>Strengths</h2>
-<div class="card">
-<ul>
-<li>Strong problem-solving ability</li>
-<li>Quick learner and adaptable</li>
-<li>Good communication and teamwork skills</li>
-</ul>
-</div>
-</div>
-
-<div class="section">
-<h2>Contact</h2>
-<div class="card">
+<section>
+<h2><i class="fas fa-envelope"></i> Contact</h2>
 <p>Email: dhanampriya67@gmail.com</p>
-<p>Phone: 8667733532</p>
-<a class="btn" href="https://www.linkedin.com/in/dhanalakshmi-n-914299298" target="_blank">LinkedIn Profile</a>
-</div>
-</div>
-
-</div>
-
-<footer>
-<p>© 2026 Dhanalakshmi | Portfolio</p>
-</footer>
+<a class="btn" href="https://www.linkedin.com/in/dhanalakshmi-n-914299298" target="_blank">LinkedIn</a>
+</section>
 
 </body>
 </html>
